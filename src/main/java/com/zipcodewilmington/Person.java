@@ -12,16 +12,18 @@ public class Person {
         this.lastName = lastName;
     }
 
-    // why is this called a GETTER??
+    // why is this called a GETTER??  returns its value
     public String getFirstName() {
+
         return firstName;
     }
 
     public String getLastName() {
+
         return lastName;
     }
 
-    @Override // why is Override here??
+    @Override // why is Override here??   you put it here
     public String toString() {
         return new StringBuilder()
                 .append("\nMy first name is " + firstName)

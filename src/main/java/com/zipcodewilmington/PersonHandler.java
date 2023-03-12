@@ -1,5 +1,9 @@
 package com.zipcodewilmington;
 
+import org.w3c.dom.css.Counter;
+
+import java.util.ArrayList;
+
 /**
  * Created by leon on 1/24/18.
  */
@@ -15,10 +19,20 @@ public class PersonHandler {
     
     public String whileLoop() {
         String result = "";
-        // create a `counter`
-        // while `counter` is less than length of array
-            // begin loop
+        int counter = 0;
+        while (counter < personArray.length) {
+            Person currentPerson = personArray[counter];
+            String stringRepresentation = currentPerson.toString();
+            result += stringRepresentation;
+            counter++;
 
+        }
+
+
+        // create a `counter` \/
+        // while `counter` is less than length of array \/
+            // begin loop \/
+            // start : help : end!
                 // use `counter` to identify the `current Person` in the array
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
@@ -31,6 +45,12 @@ public class PersonHandler {
 
     public String forLoop() {
         String result = "";
+        for (int counter = 0; counter < personArray.length; counter ++) {
+            Person currentPerson = personArray[counter];
+            String stringRepresentation = currentPerson.toString();
+            result += stringRepresentation;
+
+        }
         // identify initial value
         // identify terminal condition
         // identify increment
@@ -49,6 +69,17 @@ public class PersonHandler {
 
     public String forEachLoop() {
         String result = "";
+        ArrayList<String> arr = new ArrayList<>();
+        arr.add("\nMy first name is Leon\n");
+        arr.add("My last name is Hunter\n");
+        arr.add("My first name is Tariq\n");
+        arr.add("My last name is Hook\n");
+        arr.add("My first name is Dolio\n");
+        arr.add("My last name is Durant");
+        for (String currentString : arr) {
+            String stringRepresentation = currentString.toString();
+            result += stringRepresentation;
+        }
         // identify array's type
         // identify array's variable-name
 
